@@ -8,14 +8,17 @@
 <body>
     <script type="module">
 
-    import { company, sum, Company } from "./scripts/multiple.js";
-    
-    console.info(company);
+    // import { company, sum, Company } from "./scripts/multiple.js";
+    // alias di import menggunakan as
+    import { company as perusahaan, sum as total, Company as Perusahaan } from "./scripts/multiple.js";
 
-    const result = sum(20, 10);
+    
+    console.info(perusahaan);
+
+    const result = total(20, 10);
     console.info(result);
 
-    console.info(new Company(company));
+    console.info(new Perusahaan(perusahaan));
 
     </script>
 </body>

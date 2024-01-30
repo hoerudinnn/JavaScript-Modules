@@ -9,3 +9,6 @@ class Company {
 }
 
 export {company, sum, Company};
+
+// alias di export menggunakan 'as'
+// export {company as perusahaan, sum as total, Company as Perusahaan};
