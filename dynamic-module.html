@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Input field for entering name -->
+    <input type="text" id="name">
+    <!-- Button to trigger action -->
+    <input type="button" value="Say" id="sayButton">
+
+    <!-- JavaScript section -->
+    <script type="module">
+        // When the button is clicked
+        document.getElementById("sayButton").onclick = function(){
+            // Get the value from the input field
+            const name = document.getElementById("name").value;
+
+            // Dynamically import the alert.js module
+            import("./scripts/alert.js").then(function(module){
+                // Call the function from the imported module
+                module.alertHello(name);
+            })
+        };
+    </script>
+</body>
+</html>
